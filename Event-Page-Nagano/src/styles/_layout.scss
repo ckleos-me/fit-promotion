@@ -1,5 +1,6 @@
 @use 'mixin/font' as *;
 @use 'mixin/display' as *;
+@use 'sass:string';
 .toEventReport {
     z-index: 10;
     position: absolute;
@@ -56,7 +57,7 @@
 }
 .b-firstview {
     width: 100%;
-    height: unquote('min(41.6vw, 660px)');
+    height: string.unquote('min(41.6vw, 660px)');
     background: url('/public/firstview-img@2x.png') center center no-repeat;
     background-size: cover;
 }
@@ -87,7 +88,7 @@
             font: 700 40px/120% $font-lora;
         }
         &--detail {
-            width: unquote('min(75vw, 970px)');
+            width: string.unquote('min(75vw, 970px)');
             font: 500 18px/155% $font-poppins;
         }
         &__block {
@@ -137,13 +138,13 @@
             p {
                 font-weight: 500;
                 font-family: $font-poppins;
-                font-size: unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
+                font-size: string.unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
                 line-height: 155%;
                 color: #fff;
                 &.promotion__inner__shop__content--name {
                     font-weight: 500;
                     font-family: $font-poppins;
-                    font-size: unquote('clamp(1.625rem, 1.063rem + 1.17vw, 2rem)');
+                    font-size: string.unquote('clamp(1.625rem, 1.063rem + 1.17vw, 2rem)');
                     line-height: 155%;
                     color: #fff;
                 }
@@ -151,7 +152,7 @@
             &--alink {
                 font-weight: 500;
                 font-family: $font-poppins;
-                font-size: unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
+                font-size: string.unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
                 line-height: 100%;
                 color: #2f71b5;
                 text-decoration: none;
@@ -171,41 +172,41 @@
             &--title {
                 font-weight: 600;
                 font-family: $font-lora;
-                font-size: unquote('clamp(1.625rem, 1.063rem + 1.17vw, 2rem)');
+                font-size: string.unquote('clamp(1.625rem, 1.063rem + 1.17vw, 2rem)');
                 line-height: 120%;
                 color: #007f78;
                 span {
                     display: block;
-                    font-size: unquote('clamp(1.125rem, 0.563rem + 1.17vw, 1.5rem)');
+                    font-size: string.unquote('clamp(1.125rem, 0.563rem + 1.17vw, 1.5rem)');
                 }
             }
             &--price {
                 font-weight: 500;
                 font-family: $font-poppins;
-                font-size: unquote('clamp(1.25rem, 0.875rem + 0.78vw, 1.5rem)');
+                font-size: string.unquote('clamp(1.25rem, 0.875rem + 0.78vw, 1.5rem)');
                 line-height: 155%;
                 span {
                     display: block;
-                    font-size: unquote('clamp(0.838rem, 0.656rem + 0.59vw, 1rem)');
+                    font-size: string.unquote('clamp(0.838rem, 0.656rem + 0.59vw, 1rem)');
                 }
             }
             &--available {
                 font-weight: 600;
                 font-family: $font-poppins;
-                font-size: unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
+                font-size: string.unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
                 line-height: 155%;
             }
             &--detail {
                 font-weight: 500;
                 font-family: $font-poppins;
-                font-size: unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
+                font-size: string.unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
                 line-height: 155%;
             }
             &--alink {
                 background-color: #007f78;
                 font-weight: 500;
                 font-family: $font-eb-garamond;
-                font-size: unquote('clamp(1.125rem, 0.656rem + 0.98vw, 1.438rem)');
+                font-size: string.unquote('clamp(1.125rem, 0.656rem + 0.98vw, 1.438rem)');
                 color: #fff;
                 padding-top: 4px;
                 padding-bottom: 4px;
@@ -214,8 +215,8 @@
                     display: inline-block;
                     background: url('/public/new-tab-wh.svg') 0 0 no-repeat;
                     background-size: contain;
-                    width: unquote('clamp(1rem, 0.625rem + 0.78vw, 1.25rem)');
-                    height: unquote('clamp(0.875rem, -0.25rem + 2.34vw, 1.625rem)');
+                    width: string.unquote('clamp(1rem, 0.625rem + 0.78vw, 1.25rem)');
+                    height: string.unquote('clamp(0.875rem, -0.25rem + 2.34vw, 1.625rem)');
                     margin-left: 14px;
                     margin-right: -14px;
                     vertical-align: middle;
@@ -269,12 +270,12 @@
 .b-festival {
     background-color: #bedebb;
     img {
-        width: unquote('min(35vw, 480px)');
+        width: string.unquote('min(35vw, 480px)');
     }
 }
 .footer-link-nagano {
     img {
-        width: unquote('min(20vw, 274px)');
+        width: string.unquote('min(20vw, 274px)');
     }
     &--alink {
         background-color: #7cbe8e;
@@ -311,7 +312,7 @@
     }
     .b-firstview {
         width: 100%;
-        height: unquote('min(90vh, 660px)');
+        height: string.unquote('min(90vh, 660px)');
         background: url('/public/firstview-img-sp@2x.png') top center no-repeat;
         background-size: cover;
     }
@@ -372,7 +373,7 @@
                 &--alink {
                     font-weight: 500;
                     font-family: $font-poppins;
-                    font-size: unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
+                    font-size: string.unquote('clamp(0.938rem, 0.656rem + 0.59vw, 1.125rem)');
                     line-height: 100%;
                     color: #2f71b5;
                     text-decoration: none;
