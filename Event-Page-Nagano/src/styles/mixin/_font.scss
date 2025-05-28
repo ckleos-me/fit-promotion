@@ -1,0 +1,11 @@
+@mixin text($font-size, $font-lineheight, $spacing, $font-weight, $font-family, $color) {
+    font-size: $font-size;
+    line-height: $font-lineheight;
+    letter-spacing: $spacing;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    color: $color;
+}
+$font-eb-garamond: 'EB Garamond', serif;
+$font-lora: 'Lora', serif;
+$font-poppins: 'Poppins', serif;
