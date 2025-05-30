@@ -1,0 +1,83 @@
+@mixin display-flex($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin display-1280 {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin display-100 {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+@mixin display-100sp {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+    // small phone breakpoint
+    @if $breakpoint == smallPhone {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    // tablet breakpoint
+    @if $breakpoint == tablet {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    // PC breakpoint
+    @if $breakpoint == PC {
+        @media screen and (max-width: 1600px) {
+            @content;
+        }
+    }
+    // big screen breakpoint
+    @if $breakpoint == bigScreen {
+        @media screen and (min-width: 1601px) {
+            @content;
+        }
+    }
+}
+.d-pc-lg {
+    display: none;
+    @include respond(bigScreen) {
+        display: block;
+    }
+}
+
+.pc-only {
+    display: block;
+
+    @include respond(tablet) {
+        display: none;
+    }
+}
+
+.sp-only {
+    display: none;
+
+    @include respond(tablet) {
+        display: block;
+    }
+}
+
+.sp-sm-only {
+    display: none;
+
+    @include respond(smallPhone) {
+        display: block;
+    }
+}
