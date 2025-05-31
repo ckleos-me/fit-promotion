@@ -1,0 +1,217 @@
+@use 'mixin/_display' as *;
+@use 'mixin/_font' as *;
+.toEventReport {
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 180px;
+    height: 180px;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.hero {
+    width: 100%;
+    height: 660px;
+    background: url('/hero-bg-img.png') right top no-repeat, $color-blue;
+    background-size: cover;
+    &__container {
+        @include display-flex(column, center, flex-start);
+        row-gap: 20px;
+        width: 98%;
+        height: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    &__title {
+        font-family: $font-trajan-pro;
+        font-size: clamp(70px, calc(124 / 1280 * 100vw), 124px);
+        line-height: 100%;
+        color: $color-white;
+        text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
+    }
+    &__subtitle {
+        font-family: $font-arial;
+        font-size: clamp(24px, calc(46 / 1280 * 100vw), 46px);
+        font-weight: 600;
+        line-height: 100%;
+        color: $color-white;
+        text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
+    }
+    &__date {
+        margin-bottom: 20px;
+        font-family: $font-arial;
+        font-size: clamp(18px, calc(26 / 1280 * 100vw), 26px);
+        font-weight: 700;
+        line-height: 120%;
+        color: $color-yellow;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__img-container {
+        @include display-flex(row, center, center);
+        gap: 10px;
+
+        img {
+            display: block;
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+.certificate {
+    padding-top: 120px;
+    margin-bottom: 40px;
+    &__block {
+        @include display-1280;
+        &--img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.detail {
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+    &__img-container {
+        @include display-1280;
+        @include display-flex(row, center, stretch);
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        gap: 20px;
+        img {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+    &__text {
+        font-family: $font-noto-jp;
+        font-size: clamp(18px, calc(22 / 1280 * 100vw), 22px);
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+    }
+}
+
+.gallery {
+    background-color: $color-light-blue;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    &__container {
+        @include display-1280;
+        @include display-flex(row, center, stretch);
+        flex-wrap: wrap;
+        gap: 20px;
+        img {
+            width: calc(100% / 4 - 20px);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+}
+footer {
+    background-color: $color-blue;
+    padding: 60px 0;
+    .footer__copyright {
+        font-family: $font-arial;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-white;
+        line-height: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toEventReport {
+        top: auto;
+        bottom: 120px;
+        width: 120px;
+        height: 120px;
+    }
+    .hero {
+        height: 90vh;
+        background: url('/hero-bg-img-sp.png') center bottom no-repeat, $color-blue;
+        background-size: cover;
+        &__container {
+            padding: 0 20px;
+            @include display-flex(column, flex-start, flex-start);
+            row-gap: 20px;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            padding-top: 7vh;
+            box-sizing: border-box;
+        }
+        &__date {
+            margin-bottom: 0;
+        }
+        &__img-container {
+            display: none;
+        }
+    }
+    .certificate {
+        @include display-100sp;
+        padding-top: 60px;
+        box-sizing: border-box;
+        &__block {
+            padding: 0;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .detail {
+        padding: 60px 0;
+        &__img-container {
+            @include display-100sp;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                aspect-ratio: 5/3;
+                object-fit: cover;
+            }
+        }
+        &__text {
+            @include display-100sp;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        &__img-container--sp {
+            @include display-100sp;
+            @include display-flex(row, space-between, flex-start);
+            box-sizing: border-box;
+            margin-top: 20px;
+            img {
+                width: 48%;
+                aspect-ratio: 5/3;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .gallery {
+        @include display-100sp;
+        box-sizing: border-box;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        &__container {
+            gap: 20px;
+        }
+        img {
+            width: calc(100% / 2 - 20px);
+        }
+    }
+    footer {
+        padding: 30px 0;
+    }
+}
