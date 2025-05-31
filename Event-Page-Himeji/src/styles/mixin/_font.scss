@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('../fonts/TrajanPro.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 $font-arial: 'Arial', sans-serif;
 $font-noto-jp: 'Noto Sans JP', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
-$font-eb-garamond: 'EB Garamond', serif;
+$font-trajan-pro: 'Trajan Pro', serif;
 
 $color-white: #fff;
 $color-black: #000;
 $color-gray: #666666;
-$color-red: #8a282c;
-$color-light-yellow: #f7ecd0;
+$color-blue: #1b1464;
+$color-bg-yellow: #d8c29e;
 $color-yellow: #e7c869;
