@@ -2,5 +2,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: './' // 相対パス読み込み
+    base: '/' // 相対パス読み込み
 });
