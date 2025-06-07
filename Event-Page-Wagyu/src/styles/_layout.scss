@@ -29,15 +29,16 @@
         line-height: 120%;
     }
     &--date {
+        display: grid;
+        grid-template-columns: 100px auto;
         margin-top: 10px;
-        @include display-flex(column, flex-start, flex-start);
         font-family: $font-arial;
         font-size: clamp(16px, calc(30 / 1280 * 100vw), 30px);
         font-weight: 400;
         color: $color-yellow;
         line-height: 130%;
         p {
-            text-align: right;
+            text-align: left;
         }
     }
     &__wagyu-logo {

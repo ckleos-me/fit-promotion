@@ -1,6 +1,18 @@
 @use 'mixin/font' as *;
 @use 'mixin/display' as *;
 @use 'sass:string';
+.totop {
+    transition: opacity 0.5s;
+    opacity: 0;
+    width: 89px;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    z-index: 99;
+    &.show {
+        opacity: 1;
+    }
+}
 .toEventReport {
     z-index: 10;
     position: absolute;
