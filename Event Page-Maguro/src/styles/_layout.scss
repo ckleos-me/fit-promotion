@@ -1,0 +1,458 @@
+@use 'mixin/_display' as *;
+@use 'mixin/_font' as *;
+.totop {
+    transition: opacity 0.5s;
+    opacity: 0;
+    width: 89px;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    z-index: 99;
+    img {
+        width: 100%;
+    }
+    &.show {
+        opacity: 1;
+    }
+}
+.hero {
+    width: 100%;
+    height: 660px;
+    background: url('/hero-bg-img.png') center right no-repeat;
+    background-size: cover;
+    &__container {
+        @include display-flex(column, center, center);
+        row-gap: 60px;
+        width: 90%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    &__title {
+        font-family: $font-arial;
+        font-size: clamp(58px, calc(72 / 1280 * 100vw), 82px);
+        font-weight: 900;
+        line-height: 100%;
+        color: $color-white;
+    }
+
+    &__megumi-logo {
+        display: block;
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+.intro {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-content: center;
+    background-color: $color-bg-blue;
+    &--white {
+        background-color: $color-white;
+    }
+    &__container {
+        @include display-1280;
+        @include display-flex(row, space-between, center);
+        flex-wrap: wrap;
+        padding: 60px 20px;
+        box-sizing: content-box;
+    }
+    &__left {
+        &--reverse {
+            order: 2;
+        }
+        width: calc(50% - 30px);
+        height: fit-content;
+        @include display-flex(column, flex-start, flex-start);
+        row-gap: 30px;
+        &-title {
+            font-family: $font-poppins;
+            font-size: clamp(42px, calc(56 / 1280 * 100vw), 56px);
+            font-weight: 700;
+            line-height: 117%;
+            color: $color-black;
+        }
+        &-date {
+            font-family: $font-poppins;
+            font-size: clamp(20px, calc(25 / 1280 * 100vw), 25px);
+            font-weight: 600;
+            line-height: 150%;
+            color: $color-black;
+        }
+        &-text {
+            font-family: $font-poppins;
+            font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+            font-weight: 500;
+            line-height: 150%;
+            color: $color-black;
+        }
+    }
+    &__right {
+        &--reverse {
+            order: 1;
+        }
+        width: 50%;
+        height: fit-content;
+        @include display-flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        gap: 20px;
+        &-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            &:not(:first-child) {
+                width: calc(50% - 10px);
+            }
+        }
+    }
+    &__text--jp {
+        font-family: $font-noto-jp;
+        font-weight: 500;
+    }
+}
+.detail {
+    width: 100%;
+    height: auto;
+    padding: 120px 0;
+    &__img-container {
+        @include display-1280;
+        @include display-flex(row, center, stretch);
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        gap: 20px;
+        img {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+    &__text {
+        @include display-1280;
+        padding: 0 160px;
+        font-family: $font-noto-jp;
+        font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+        font-weight: 500;
+        line-height: 150%;
+
+        text-align: center;
+    }
+}
+.certificate {
+    padding: 70px 0;
+    background-color: $color-bg-blue;
+    &__inner {
+        @include display-1280;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+        &--flex {
+            @include display-flex(row, center, stretch);
+            flex-wrap: wrap;
+            gap: 60px;
+            .certificate__block {
+                width: fit-content;
+                height: 560px;
+                img {
+                    width: auto;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &__block {
+        &:nth-child(1) {
+            grid-row: 1/3;
+            grid-column: 1/2;
+            place-self: center;
+        }
+        &:nth-child(2) {
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        &:nth-child(3) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+
+        &--img {
+            width: 100%;
+            height: auto;
+        }
+        &--text {
+            padding-left: 10px;
+            font-family: $font-arial;
+            font-size: clamp(13px, 15px, 15px);
+            font-weight: 400;
+            line-height: 100%;
+            color: $color-gray;
+        }
+    }
+}
+.video {
+    padding: 140px 40px;
+    &__title {
+        margin-bottom: 70px;
+        font-family: $font-eb-garamond;
+        font-size: clamp(32px, calc(54 / 1280 * 100vw), 54px);
+        font-weight: 600;
+        color: $color-black;
+        text-align: center;
+    }
+    &__inner {
+        width: 100%;
+        aspect-ratio: 16/9;
+        display: grid;
+        place-items: center;
+    }
+    &__iframe {
+        width: 90%;
+        max-width: 1200px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
+.media {
+    padding: 140px 40px;
+    @include display-flex(column, center, center);
+    row-gap: 20px;
+    &__title {
+        font-family: $font-eb-garamond;
+        font-size: clamp(32px, calc(54 / 1280 * 100vw), 54px);
+        font-weight: 600;
+        line-height: 100%;
+        color: $color-black;
+    }
+    &__subtitle {
+        margin-bottom: 40px;
+        font-family: $font-poppins;
+        font-size: clamp(18px, calc(24 / 1280 * 100vw), 24px);
+        font-weight: 500;
+        line-height: 100%;
+        color: $color-black;
+    }
+    &__profile-container {
+        @include display-1280;
+        @include display-flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 50px;
+        box-sizing: border-box;
+        .media__profile {
+            width: calc(100% / 5 - 50px);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    &__profile-img {
+        width: 210px;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    &__profile-name {
+        margin-top: 20px;
+        font-family: $font-poppins;
+        font-size: clamp(15px, calc(18 / 1280 * 100vw), 18px);
+        font-weight: 500;
+        line-height: 100%;
+        color: $color-black;
+        text-align: center;
+    }
+}
+.gallery {
+    @include display-1280;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    @include display-flex(row, center, stretch);
+    flex-wrap: wrap;
+    gap: 20px;
+    img {
+        width: calc(100% / 4 - 20px);
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+}
+footer {
+    background-color: $color-black;
+    padding: 60px 0;
+    .footer__copyright {
+        font-family: $font-arial;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-white;
+        line-height: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .totop {
+        width: 70px;
+    }
+    .hero {
+        height: 98vh;
+        background: url('/hero-bg-img-sp.png') bottom left no-repeat;
+        background-size: cover;
+        &__container {
+            @include display-flex(column, flex-end, center);
+            row-gap: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            padding: 0 4px 6vh;
+        }
+        &__title {
+            text-align: center;
+            line-height: 110%;
+        }
+        &__megumi-logo {
+            display: block;
+            width: 180px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    .intro {
+        &__container {
+            @include display-100sp;
+            box-sizing: border-box;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            @include display-flex(row, space-between, center);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        &__left {
+            width: 100%;
+            height: auto;
+            &-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        &__right {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .detail {
+        padding: 60px 0;
+        &__img-container {
+            @include display-100sp;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                aspect-ratio: 5/3;
+                object-fit: cover;
+            }
+        }
+        &__text {
+            @include display-100sp;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        &__img-container--sp {
+            @include display-100sp;
+            @include display-flex(row, space-between, flex-start);
+            box-sizing: border-box;
+            margin-top: 20px;
+            img {
+                width: 48%;
+                aspect-ratio: 5/3;
+                object-fit: cover;
+            }
+        }
+    }
+    .certificate {
+        padding: 40px 0;
+        &__inner {
+            @include display-100sp;
+            box-sizing: border-box;
+            @include display-flex(column, center, center);
+            gap: 40px 0;
+            &--flex {
+                @include display-100sp;
+                box-sizing: border-box;
+                @include display-flex(column, center, center);
+                flex-wrap: wrap;
+                gap: auto;
+                .certificate__block {
+                    width: 80%;
+                    max-width: 100vw;
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        &__block {
+            width: 80%;
+        }
+    }
+    .video {
+        padding: 60px 10px;
+        &__iframe {
+            max-width: 100%;
+        }
+    }
+    .media {
+        padding: 60px 20px;
+        &__title {
+            text-align: center;
+        }
+        &__subtitle {
+            margin-bottom: auto;
+            text-align: center;
+            line-height: 120%;
+        }
+        &__profile-container {
+            @include display-100sp;
+            box-sizing: border-box;
+            @include display-flex(row, space-between, center);
+            flex-wrap: wrap;
+            gap: 40px 10px;
+            .media__profile {
+                width: calc(100% / 2 - 10px);
+                &:last-child {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        &__profile-img {
+            width: 100%;
+        }
+    }
+    .gallery {
+        @include display-100sp;
+        box-sizing: border-box;
+        margin-top: 0px;
+        margin-bottom: 60px;
+        gap: 20px;
+        img {
+            width: calc(100% / 2 - 20px);
+        }
+    }
+    footer {
+        padding: 30px 0;
+    }
+}
