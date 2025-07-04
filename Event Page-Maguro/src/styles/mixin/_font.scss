@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'astoria-medium';
+    src: url('/src/fonts/AstoriaMedium.ttf') format('truetype');
+    font-display: swap;
+}
+$font-astoria-medium: 'astoria-medium', serif;
 $font-arial: 'Arial', sans-serif;
 $font-noto-jp: 'Noto Sans JP', sans-serif;
 $font-poppins: 'Poppins', sans-serif;

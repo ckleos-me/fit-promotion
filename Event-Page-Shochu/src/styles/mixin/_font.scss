@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'helvetica-black';
+    src: url('/src/fonts/HelveticaLTStdBlackCondensed.woff') format('woff'), url('../../fonts/HelveticaLTStdBlackCondensed.woff2') format('woff2');
+    font-display: swap;
+}
+$font-helvetica-black: 'helvetica-black', serif;
 $font-arial: 'Arial', sans-serif;
 $font-noto-jp: 'Noto Sans JP', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
