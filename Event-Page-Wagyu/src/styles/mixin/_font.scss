@@ -1,5 +1,18 @@
-$font-eb-garamond: 'EB Garamond', serif;
-$font-arial: 'Arial', sans-serif;
+@font-face {
+    font-family: 'Bogue slab bold';
+    src: url('/src/fonts/BogueSlab-Bold.otf') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'helvetica-black';
+    src: url('/src/fonts/HelveticaLTStdBlackCondensed.woff') format('woff'), url('../../fonts/HelveticaLTStdBlackCondensed.woff2') format('woff2');
+    font-display: swap;
+}
+
+$font-bogue-slab-bold: 'Bogue slab bold', serif;
+$font-helvetica-black: 'helvetica-black', serif;
+$font-poppins: 'Poppins', sans-serif;
 $font-noto-jp: 'Noto Sans JP', sans-serif;
 $color-white: #fff;
 $color-black: #000;

@@ -1,14 +1,25 @@
 @font-face {
-    font-family: 'Trajan Pro';
-    src: url('../fonts/TrajanPro.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Trajan Pro Bold';
+    src: url('/src/fonts/TrajanPro-Bold.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Trajan Pro Regular';
+    src: url('/src/fonts/TrajanPro-Regular.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'helvetica-black';
+    src: url('/src/fonts/HelveticaLTStdBlackCondensed.woff') format('woff'), url('../../fonts/HelveticaLTStdBlackCondensed.woff2') format('woff2');
     font-display: swap;
 }
 $font-arial: 'Arial', sans-serif;
 $font-noto-jp: 'Noto Sans JP', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
 $font-trajan-pro: 'Trajan Pro', serif;
+$font-trajan-pro-bold: 'Trajan Pro Bold', serif;
+$font-trajan-pro-regular: 'Trajan Pro Regular', serif;
+$font-helvetica-black: 'helvetica-black', serif;
 
 $color-white: #fff;
 $color-black: #000;
