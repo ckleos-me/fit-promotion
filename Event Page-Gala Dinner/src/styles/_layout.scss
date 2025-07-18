@@ -15,29 +15,16 @@
         opacity: 1;
     }
 }
-.toEventReport {
-    z-index: 10;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    width: 180px;
-    height: 180px;
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-}
+
 .hero {
     width: 100%;
-    height: 660px;
+    height: 600px;
     background: url('/hero-bg-img.png') center center no-repeat;
     background-size: cover;
     &__container {
-        @include display-flex(column, center, flex-start);
-        row-gap: 20px;
+        @include display-flex(column, center, center);
         width: fit-content;
-        height: 660px;
+        height: 100%;
         max-width: 900px;
         margin: 0 auto;
         padding: 0 40px;
@@ -46,38 +33,49 @@
     &__title {
         width: 100%;
         font-family: $font-trajan-pro-bold;
-        font-size: clamp(70px, calc(130 / 1280 * 100vw), 130px);
+        font-size: clamp(60px, calc(90 / 1280 * 100vw), 90px);
         line-height: 100%;
-        color: $color-white;
+        color: $color-yellow;
         text-align: center;
     }
     &__subtitle {
         width: 100%;
         font-family: $font-poppins;
-        font-size: clamp(24px, calc(52 / 1280 * 100vw), 52px);
+        font-size: clamp(24px, calc(41 / 1280 * 100vw), 41px);
         font-weight: 600;
         line-height: 100%;
-        color: $color-white;
+        color: $color-yellow;
         text-align: center;
+        margin-bottom: 20px;
     }
     &__date {
         width: 100%;
         margin-bottom: 20px;
-        font-family: $font-helvetica-black;
-        font-size: clamp(18px, calc(26 / 1280 * 100vw), 26px);
+        font-family: $font-poppins;
+        font-size: clamp(18px, calc(30 / 1280 * 100vw), 30px);
         font-weight: 700;
         line-height: 120%;
-        color: $color-yellow;
+        color: $color-white;
         text-align: center;
     }
-    &__img-container {
-        display: block;
-        width: 100%;
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        column-gap: 80px;
+
         img {
+            &:first-child {
+                width: 256px;
+                height: auto;
+                object-fit: contain;
+            }
+            &:last-child {
+                width: 122px;
+                height: auto;
+                object-fit: contain;
+            }
             display: block;
-            width: 200px;
-            height: auto;
-            object-fit: contain;
             margin: 0 auto;
         }
     }
@@ -99,19 +97,19 @@
     }
     &__text {
         padding: 0 40px;
-        max-width: 1040px;
+        max-width: 1060px;
         font-family: $font-noto-jp;
-        font-size: clamp(18px, calc(22 / 1280 * 100vw), 22px);
+        font-size: clamp(18px, calc(20 / 1280 * 100vw), 20px);
         font-weight: 500;
-        line-height: 150%;
+        line-height: 160%;
         text-align: center;
         margin: 0 auto;
 
         &-eng {
             margin-bottom: 40px;
-            font-family: $font-arial;
-            font-size: clamp(22px, calc(27 / 1280 * 100vw), 27px);
-            font-weight: 700;
+            font-family: $font-poppins;
+            font-size: clamp(18px, calc(22 / 1280 * 100vw), 22px);
+            font-weight: 500;
             line-height: 150%;
             text-align: center;
         }
@@ -119,7 +117,7 @@
 }
 .certificate {
     padding: 70px 0;
-    background-color: $color-bg-blue;
+    background-color: $color-bg-yellow;
     &__inner {
         @include display-1280;
         @include display-flex(row, center, flex-end);
@@ -174,19 +172,13 @@ footer {
     .totop {
         width: 70px;
     }
-    .toEventReport {
-        top: auto;
-        bottom: 50px;
-        width: 120px;
-        height: 120px;
-    }
     .hero {
         height: 90vh;
-        background: url('/hero-bg-img-sp.png') center bottom no-repeat;
+        background: url('/hero-bg-img.png') center bottom no-repeat;
         background-size: cover;
         &__container {
             padding: 0 20px;
-            @include display-flex(column, flex-start, flex-start);
+            @include display-flex(column, flex-start, center);
             row-gap: 20px;
             width: 100%;
             height: 100%;
@@ -197,8 +189,23 @@ footer {
         &__date {
             margin-bottom: 0;
         }
-        &__img-container {
-            display: none;
+        &__logo-container {
+            column-gap: 20px;
+
+            img {
+                &:first-child {
+                    width: 200px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                &:last-child {
+                    width: 110px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                display: block;
+                margin: 0 auto;
+            }
         }
     }
 
