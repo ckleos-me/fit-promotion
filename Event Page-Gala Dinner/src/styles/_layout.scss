@@ -120,7 +120,7 @@
     background-color: $color-bg-yellow;
     &__inner {
         @include display-1280;
-        @include display-flex(row, center, flex-end);
+        @include display-flex(row, center, flex-start);
         flex-wrap: wrap;
         gap: 40px;
     }
