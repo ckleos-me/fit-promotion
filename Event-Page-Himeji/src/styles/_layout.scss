@@ -68,7 +68,7 @@
 .detail {
     width: 100%;
     height: auto;
-    padding: 120px 0;
+    padding: 80px 0;
     &__img-container {
         @include display-1280;
         @include display-flex(row, center, stretch);
@@ -87,9 +87,9 @@
         text-align: center;
         &-eng {
             margin-bottom: 40px;
-            font-family: $font-helvetica-black;
+            font-family: $font-poppins;
             font-size: clamp(22px, calc(27 / 1280 * 100vw), 27px);
-            font-weight: 700;
+            font-weight: 600;
             line-height: 150%;
             text-align: center;
         }

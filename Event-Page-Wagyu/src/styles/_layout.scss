@@ -32,7 +32,7 @@
         display: grid;
         grid-template-columns: 100px auto;
         margin-top: 10px;
-        font-family: $font-helvetica-black;
+        font-family: $font-poppins;
         font-size: clamp(16px, calc(30 / 1280 * 100vw), 30px);
         font-weight: 400;
         color: $color-yellow;
@@ -56,9 +56,9 @@
     padding: 56px 0;
     &--text {
         @include display-1280;
-        font-family: $font-helvetica-black;
+        font-family: $font-poppins;
         font-size: clamp(18px, calc(27 / 1440 * 100vw), 27px);
-        font-weight: 600;
+        font-weight: 500;
         line-height: 126%;
         color: $color-black;
         text-align: center;
@@ -67,7 +67,7 @@
 .highlights {
     @include display-1280;
     &--title {
-        font-family: $font-helvetica-black;
+        font-family: $font-poppins;
         font-size: clamp(24px, 2.08vw, 30px);
         font-weight: 400;
         color: $color-white;
@@ -97,14 +97,14 @@
             vertical-align: bottom;
         }
         &--title {
-            font-family: $font-helvetica-black;
+            font-family: $font-poppins;
             font-size: clamp(18px, 20px, 20px);
             font-weight: 400;
             line-height: 120%;
             color: $color-red;
         }
         &--text {
-            font-family: $font-helvetica-black;
+            font-family: $font-poppins;
             font-size: clamp(16px, 18px, 18px);
             font-weight: 400;
             line-height: 140%;
@@ -138,7 +138,7 @@
         }
         &--text {
             padding-left: 10px;
-            font-family: $font-helvetica-black;
+            font-family: $font-poppins;
             font-size: clamp(13px, 15px, 15px);
             font-weight: 400;
             line-height: 100%;
@@ -188,7 +188,7 @@ footer {
     background-color: $color-red;
     padding: 60px 0;
     .footer__copyright {
-        font-family: $font-helvetica-black;
+        font-family: $font-poppins;
         font-size: 14px;
         font-weight: 400;
         color: $color-white;
